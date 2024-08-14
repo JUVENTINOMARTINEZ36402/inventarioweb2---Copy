@@ -1,0 +1,95 @@
+:root {
+  --foreground-rgb: 0, 0, 0; /* Texto negro */
+  --background-start-rgb: 240, 242, 245; /* Fondo gris claro */
+  --background-end-rgb: 255, 255, 255; /* Fondo blanco */
+  --primary-color: 34, 153, 195; /* Color azul para botones y enlaces */
+  --secondary-color: 248, 250, 252; /* Color gris claro para fondos */
+}
+
+/* Colores del tema oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255; /* Texto blanco */
+    --background-start-rgb: 28, 30, 33; /* Fondo negro */
+    --background-end-rgb: 18, 19, 20; /* Fondo negro */
+    --primary-color: 85, 139, 209; /* Azul más oscuro para el tema oscuro */
+    --secondary-color: 33, 37, 41; /* Gris oscuro para el tema oscuro */
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb)); /* Color del texto */
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+a {
+  color: rgb(var(--primary-color)); /* Color de los enlaces */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para botones */
+button {
+  background-color: rgb(var(--primary-color));
+  color: white;
+  border: none;
+  border-radius: 0.375rem; /* Bordes redondeados */
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(var(--primary-color) / 1.2); /* Aclarar al pasar el ratón */
+}
+
+/* Estilos adicionales */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background-color: rgb(var(--secondary-color));
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Centrando el formulario en el centro de la pantalla */
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
